@@ -1,0 +1,401 @@
+:root {
+  --cat-important: #e5533d;   /* warm coral red */
+  --cat-personal: #2f9e44;    /* warm green */
+  --cat-finance: #0b7285;     /* deep teal */
+  --cat-social: #7950f2;      /* muted violet */
+  --cat-promotions: #f08c00;  /* amber orange */
+  --cat-updates: #1c7ed6;     /* calm blue */
+  --cat-spam: #868e96;        /* neutral gray */
+}
+
+.inboxLayout {
+  display: flex;
+  height: 100vh;
+  background-color: #f8f9fa;
+  font-family: Inter, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: white;
+  border-right: 1px solid #e0e0e0;
+  padding: 24px 16px;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.logoIcon {
+  background: #4285f4;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.categoryItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+
+.categoryItem:hover {
+  background: #f1f3f4;
+}
+
+.activeCat {
+  background: #e8f0fe;
+}
+
+.catDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.catName {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Main */
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+}
+
+.headerBar {
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerActions {
+  display: flex;
+  gap: 12px;
+}
+
+.refreshBtn {
+  background: #4285f4;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filterBtn {
+  background: white;
+  border: 1px solid #dadce0;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Error state */
+.errorState {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Email cards */
+.emailContainer {
+  padding: 0 32px 32px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.emailCard {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.emailCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.openGmailBtn {
+  font-size: 12px;
+  background: none;
+  border: none;
+  color: #1967d2;
+  cursor: pointer;
+  padding: 0;
+}
+
+.openGmailBtn:hover {
+  text-decoration: underline;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.subjectRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subject {
+  font-weight: 700;
+  font-size: 16px;
+  color: #202124;
+}
+
+.time {
+  font-size: 12px;
+  color: #3c4043;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.sender {
+  font-weight: 600;
+  font-size: 14px;
+  color: #3c4043;
+  margin-bottom: 8px;
+}
+
+.snippet {
+  font-size: 14px;
+  color: #5f6368;
+  line-height: 1.4;
+}
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Hover overlay */
+.hoverOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(66, 133, 244, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+  border-radius: 12px;
+}
+
+.emailCard:hover .hoverOverlay {
+  opacity: 1;
+}
+
+.hoverOverlay span {
+  background: #4285f4;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.brandTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.brandSubtitle {
+  font-size: 12px;
+  color: #70757a;
+}
+
+.emailCard {
+  position: relative;
+}
+
+.emailCard:hover {
+  background-color: #f1f5f9;
+}
+
+.openGmailHover {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: white;
+  border: 1px solid #d0d7de;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: #1967d2;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+/* Email Card */
+/* Email Card Base */
+.emailCard {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Content dims on hover */
+.cardContent {
+  transition: opacity 0.2s ease;
+}
+
+.emailCard:hover .cardContent {
+  opacity: 0.35;
+}
+
+/* Hover overlay — hidden by default */
+.hoverOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Show overlay ONLY on hover */
+.emailCard:hover .hoverOverlay {
+  opacity: 1;
+}
+
+/* Overlay text */
+.hoverOverlay span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1967d2;
+  background: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Text styles */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.subject {
+  font-size: 15px;
+  font-weight: 700;
+  color: #202124;
+}
+
+.time {
+  font-size: 12px;
+  color: #5f6368;
+}
+
+.sender {
+  font-size: 13px;
+  font-weight: 600;
+  color: #3c4043;
+  margin-bottom: 6px;
+}
+
+.snippet {
+  font-size: 13px;
+  color: #5f6368;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.categoryTag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Category colors (CSS Modules safe) */
+.catImportant {
+  background: color-mix(in srgb, var(--cat-important) 15%, white);
+  color: var(--cat-important);
+}
+
+.catPersonal {
+  background: color-mix(in srgb, var(--cat-personal) 15%, white);
+  color: var(--cat-personal);
+}
+
+.catFinance {
+  background: color-mix(in srgb, var(--cat-finance) 15%, white);
+  color: var(--cat-finance);
+}
+
+.catSocial {
+  background: color-mix(in srgb, var(--cat-social) 15%, white);
+  color: var(--cat-social);
+}
+
+.catPromotions {
+  background: color-mix(in srgb, var(--cat-promotions) 15%, white);
+  color: var(--cat-promotions);
+}
+
+.catUpdates {
+  background: color-mix(in srgb, var(--cat-updates) 15%, white);
+  color: var(--cat-updates);
+}
+
+.catSpam {
+  background: #f1f3f5;
+  color: var(--cat-spam);
+}
+
+
+
+.unread {
+  font-weight: 800;
+}
