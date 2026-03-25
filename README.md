@@ -1,12 +1,12 @@
-XMail – AI-Driven Email Categorization Engine
+**XMail – AI-Driven Email Categorization Engine**
 
-🚀 Overview
+**🚀 Overview**
 
 XMail is an AI-powered email classification system designed to automatically categorize incoming emails into meaningful classes such as Spam, Promotions, Social, and Important. It combines machine learning with real-time Gmail data to provide a structured and intelligent inbox experience.
 
 ⸻
 
-🧠 Key Features
+**🧠 Key Features**
 	•	Automated email classification using machine learning and NLP techniques
 	•	Categorization into multiple classes (Spam, Promotions, Social, Important, etc.)
 	•	Real-time email fetching using Gmail API
@@ -16,9 +16,9 @@ XMail is an AI-powered email classification system designed to automatically cat
 
 ⸻
 
-🛠 Tech Stack
+**🛠 Tech Stack**
 
-Backend
+**Backend**
 	•	Python
 	•	FastAPI / Flask
 	•	Scikit-learn
@@ -26,18 +26,18 @@ Backend
 	•	Gmail API
 	•	OAuth 2.0
 
-Frontend
+**Frontend**
 	•	React.js
 	•	JavaScript
 	•	CSS
 
-Cloud & Tools
+**Cloud & Tools**
 	•	Google Cloud Platform
 	•	REST APIs
 
 ⸻
 
-⚙️ System Architecture
+**⚙️ System Architecture**
 	1.	Gmail API fetches user emails securely using OAuth 2.0
 	2.	Backend extracts and processes email content (subject + snippet)
 	3.	NLP pipeline performs text preprocessing and vectorization
@@ -46,7 +46,7 @@ Cloud & Tools
 
 ⸻
 
-📊 Machine Learning Pipeline
+**📊 Machine Learning Pipeline**
 	•	Text preprocessing and feature extraction
 	•	Supervised learning-based classification
 	•	Model evaluation using:
@@ -57,7 +57,7 @@ Cloud & Tools
 
 ⸻
 
-⚙️ Setup Instructions
+**⚙️ Setup Instructions**
 
 1. Clone the Repository
 
@@ -86,7 +86,7 @@ npm start
 
 ⸻
 
-🔐 Security Considerations
+**🔐 Security Considerations**
 
 Sensitive files such as:
 	•	credentials.json
@@ -96,7 +96,7 @@ are excluded using .gitignore and must be configured locally. These files are re
 
 ⸻
 
-🔮 Future Improvements
+**🔮 Future Improvements**
 	•	Email summarization using LLMs
 	•	Personalized classification models
 	•	Priority-based inbox ranking
@@ -104,7 +104,7 @@ are excluded using .gitignore and must be configured locally. These files are re
 
 ⸻
 
-👨‍💻 Author
+**👨‍💻 Author**
 
 Avi Jain
 
