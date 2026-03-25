@@ -1,0 +1,16 @@
+# 🔐 Secrets (DO NOT UPLOAD)
+credentials.json
+token_data/
+emails_classified.json
+
+# 🐍 Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 🌐 Node / Frontend
+node_modules/
+
+# 🍎 Mac junk
+.DS_Store
